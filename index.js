@@ -1,24 +1,39 @@
-//Descuento del 30% por la compra de 2 servicios o más.
-
-function welcomePer(nombres, apellidos) {
-    alert (`Bienvenido/a ${nombres} ${apellidos}`);
+function welcome (nombre, apellido) {
+  do {
+      if (!nombre || !apellido) {
+          alert("Ingresa algún nombre un apellido")
+      } else {
+          console.log(`Bienvenido/a ${nombre} ${apellido}, es un placer que nos elijas.`)
+      }
+      break;
+  } while (!nombre || !apellido);
 }
 
-let nombres = prompt("Ingrese sus nombres")
-let apellidos = prompt("Ingrese sus apellido")
+let nombre = prompt("Ingresa tu nombre.");
 
-welcomePer(nombres, apellidos);
+let apellido = prompt("Ingresa tu apellido.");
 
-let servicios = prompt('ingrese la cantidad de servicios que quiere');
-let clase = prompt("¿Qué clase de servicio buscás?")
+welcome(nombre, apellido);
 
-if (servicios >= 2 && clase == "Baño lunar"){
-    alert ("Recibirás un descuento.")
+let servicios = prompt("Ingrese el servicio que requiere");
+
+switch (servicios) {
+  case "Baño lunar":
+      alert("Has recibido un descuento del 25% por elegir éste servicio")
+      break;
+  case "Masaje descontracturante":
+      alert("Usted ha seleccionado: Masaje descontracturante")
+      break;
+  case "Masaje circulatorio":
+      alert(`ADVERTENCIA` <br> + `El masaje circulatorio es solo para mayores de 18 años`)
+      break;
+  default:
+      alert("¿Acaso no encontró lo que buscaba? Contactenos para más información")
+      break;
 }
-else if (servicios >= 2 && clase == "Masaje descontracturante"){
-    alert ("Recibirás un descuento.")
-}
-else (servicios < 2); {
-    alert ("Recordá que si contratas 2 o más de nuestros servicios seleccionados recibirás un descuento del 30%.")
-}
+
+
+
+
+
 
