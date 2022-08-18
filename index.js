@@ -12,8 +12,6 @@ let apellido = prompt("Ingresa tu apellido.");
 
 Validate();
 
-console.log(question);
-
  function services() {
     let servicios
     alert("Por favor, a continuación elija el número de la opción del servicio que usted requiera. (ej.: 1)")
@@ -34,7 +32,6 @@ console.log(question);
  }
 
 services ();
-
 //
 let masajistas = [
     { nombre: "ofelia", edad:45},
