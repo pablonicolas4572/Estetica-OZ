@@ -1,29 +1,76 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: aquamarine;
+  background-image: url(./img/bg_1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-header nav div img {
+header .navbar {
+  background-color: rgba(141, 207, 103, 0.308);
+  border-radius: 0 0 10% 10%;
+}
+header .navbar div img {
   width: 300px;
   border-radius: 50%;
-  -webkit-box-shadow: 1px 1px 20px;
-          box-shadow: 1px 1px 20px;
+  box-shadow: 1px 1px 20px;
 }
 
 .navbar-nav {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
-section h1 {
+main h1 {
   padding-top: 20px;
   text-align: center;
+  color: rgb(0, 0, 0);
 }
-/*# sourceMappingURL=styles.css.map */
+
+.container1 div h2 {
+  color: #000;
+}
+.container1 div p {
+  color: #000;
+}
+
+footer {
+  background-color: rgba(141, 207, 103, 0.308);
+  margin-top: 2em;
+  border-radius: 15% 15% 0 0;
+}
+footer p {
+  margin: 0 0 0 0;
+  color: black;
+}
+footer .p-in {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+}
+footer .p-out {
+  text-align: center;
+  padding-top: 1em;
+  margin-bottom: 0;
+  font-size: 1em;
+}
+footer div {
+  display: flex;
+  gap: 4em;
+  justify-content: center;
+}
+footer div .fa-brands {
+  font-size: 2em;
+}
+footer div a {
+  transition: all 0.3s ease-in-out;
+  color: rgb(0, 97, 13);
+}
+footer div a:hover {
+  transition: color 0.3s ease-out;
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=styles.css.map */

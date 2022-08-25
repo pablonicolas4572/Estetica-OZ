@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 body{
-    background-color: aquamarine;
+    background-image: url(./img/bg_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 header{
-    nav{
+    .navbar{
+        background-color: rgba(141, 207, 103, 0.308);
+        border-radius: 0 0 10% 10% ;
         div{
             img{
                 width: 300px;
@@ -20,8 +26,64 @@ header{
 .navbar-nav{
 align-items: center;
 }
-section h1{
-    padding-top: 20px;
-    text-align: center;
-    
+
+
+main{
+    h1{
+        padding-top: 20px;
+        text-align: center;
+        color:rgb(0, 0, 0);
+    }
+}
+.container1{
+    div{
+        h2{
+            color: #000;
+        }
+        p{
+            color: #000;
+        }
+    }
+}
+
+footer {
+    background-color:rgba(141, 207, 103, 0.308);
+    margin-top: 2em;
+    border-radius: 15% 15% 0 0;
+    p{
+        margin: 0 0 0 0;
+        color: black;
+    }
+    .p-in{
+        text-align: center;
+        font-size: 1.5em;
+        padding-bottom: 0.5em;
+    }
+    .p-out{
+        text-align: center;
+        padding-top: 1em;
+        margin-bottom: 0;
+        font-size: 1em;
+    }
+    div{
+        display: flex;
+        gap:4em;
+        justify-content: center;
+        .fa-brands{
+            font-size: 2em;
+        }
+        a{
+            transition: all 0.3s ease-in-out;
+            color: rgb(0, 97, 13);
+        }
+        a:hover{
+            transition: color 0.3s ease-out;
+            color:rgb(255, 255, 255);
+        }
+    }
+}
+
+#msj{
+    font-size: 4em;
+    border-color: aqua;
 }
