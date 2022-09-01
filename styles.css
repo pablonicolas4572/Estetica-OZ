@@ -9,6 +9,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  z-index: 3;
 }
 
 header .navbar {
@@ -73,4 +74,96 @@ footer div a {
 footer div a:hover {
   transition: color 0.3s ease-out;
   color: rgb(255, 255, 255);
+}
+
+.button {
+  background-color: rgba(141, 207, 103, 0.308);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1em;
+  border: 0%;
+  border-radius: 5px;
+  box-shadow: 8px -3px 5px 0px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 8px -3px 5px 0px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 8px -3px 5px 0px rgba(0, 0, 0, 0.29);
+  padding: 1em 1em;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.mdl-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+}
+.mdl-cont .mdl {
+  background-color: antiquewhite;
+  width: 38em;
+  border: #000 solid;
+  border-radius: 15px 15px 15px 15px;
+  padding: 1em 1em 1em 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  transition: all 0.2s ease-in-out;
+}
+.mdl-cont .mdl:hover {
+  transform: scale(1.05);
+}
+.mdl-cont p {
+  opacity: 0.6;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+#close {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.5em;
+  border-radius: 5px;
+  box-shadow: 8px -3px 5px 0px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 8px -3px 5px 0px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 8px -3px 5px 0px rgba(0, 0, 0, 0.29);
+  padding: 1em 1em;
+}
+
+.but {
+  background-color: rgba(75, 165, 23, 0.688);
+  border-style: none;
+  border-radius: 5%;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.but:hover {
+  transform: scale(1.05);
+}
+
+main div {
+  margin-top: 3em;
+  margin-left: 3em;
+  margin-right: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: rgba(141, 207, 103, 0.308);
+  border-radius: 5%;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
 }/*# sourceMappingURL=styles.css.map */

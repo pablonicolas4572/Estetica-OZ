@@ -13,28 +13,50 @@ let apellido = prompt("Ingresa tu apellido.");
 
 Validate(); */
 
-let Btn1 = document.querySelector
-    (".Btn1");
-let Btn2 = document.querySelector
-    (".Btn2");
-let Btn3 = document.querySelector
-    (".Btn3");
-let Btn4 = document.querySelector
-    (".Btn4");
+let Btn1 = document.querySelector(".Btn1");
+let Btn2 = document.querySelector(".Btn2");
+let Btn3 = document.querySelector(".Btn3");
+let Btn4 = document.querySelector(".Btn4");
+let modalContainer = document.querySelector("#msj");
+let modal = document.querySelector(".mdl");
+let close = document.querySelector("#close");
 
-Btn1.addEventListener('click', services);
-Btn2.addEventListener('click', services);
-Btn3.addEventListener('click', services);
-Btn4.addEventListener('click', services);
+Btn1.addEventListener('click', () => {
+    modalContainer.classList.add('show');
+});
+close.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+});
+Btn2.addEventListener('click', () => {
+    modalContainer.classList.add('show');
+});
+close.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+});
+Btn3.addEventListener('click', () => {
+    modalContainer.classList.add('show');
+});
+close.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+});
+Btn4.addEventListener('click', () => {
+    modalContainer.classList.add('show');
+});
+close.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+});
 
+let botonform = document.getElementById("formbtn");
 
-function services() {
-    document.getElementById("msj").innerHTML = '<p> Usted acaba de seleccionar el servicio. </p>';
-    document.getElementById("msj").style.color = "green";
-    document.getElementById("msj").style.fontSize = "3em";
-    document.getElementById("msj").style.textAlign = "center";
-}
+formbtn.addEventListener('click', () => {
+    window.open("pages/home.html", "formulario");
+})
 
+const form2 = document.getElementById("btnEmpezar");
+btnEmpezar.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let reserva = new FormData(form2)
+})
 //
 let masajistas = [
     { nombre: "ofelia", edad: 45 },
