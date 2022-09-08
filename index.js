@@ -1,17 +1,3 @@
-/* 
-function Validate() {
-    while (!nombre || !apellido) {
-        alert("Ingresa nombre y apellido Por Favor!");
-        nombre = prompt("Ingresa tu nombre.");
-        apellido = prompt("Ingresa tu apellido.");
-    }
-    alert(`Bienvenido/a ${nombre} ${apellido}, es un placer que nos elijas.`);
-}
-
-let nombre = prompt("Ingresa tu nombre.");
-let apellido = prompt("Ingresa tu apellido.");
-
-Validate(); */
 
 let Btn1 = document.querySelector(".Btn1");
 let Btn2 = document.querySelector(".Btn2");
@@ -52,12 +38,52 @@ formbtn.addEventListener('click', () => {
     window.open("pages/home.html", "formulario");
 })
 
-const form2 = document.getElementById("btnEmpezar");
-btnEmpezar.addEventListener('submit', function (e) {
-    e.preventDefault();
-    let reserva = new FormData(form2)
+const bienvenida = document.getElementById("bienvenida");
+
+bienvenida.addEventListener('click', () => {
+    document.getElementById("divForm")
+    divForm.innerHTML = `
+    <div class="form-Index">
+    <h2>Te damos la bienvenida a nuestro SPA</h2>
+    <h3>Por favor, a continuación completá los siguientes datos</h3>
+    <form class="row g-3">
+    <div class ="col-6">
+    <label class="form-label" for="nombre">Nombre</label>
+    <input class="form-control" id="nombre" type="text">
+    </div>
+    <div class="col-6">
+    <label class="form-label" for="apellido">Apellido</label>
+    <input class="form-control" id="apellido" type="text">
+    </div>
+    <div class="col-6">
+    <button type="submit" id="enviar" class="btn btn-dark">Enviar</button>
+    </div>
+    `
 })
-//
+
+const arrayNombre = [];
+const arrayApellido = [];
+
+const enviar = document.getElementById("divForm");
+
+divForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    let nombre = document.getElementById("nombre").value;
+    let apellido = document.getElementById("apellido").value;
+    const nombreUsuario = { nombre, apellido };
+    const nombreApellido = { apellido };
+
+    arrayNombre.push(nombreUsuario, nombreApellido);
+    localStorage.setItem('usuarios', JSON.stringify(nombreUsuario, nombreApellido));
+    JSON.parse(localStorage.getItem('usuarios'));
+    //una vez que la persona haga click en el boton "enviar", le va a aparecer ésta alerta.
+    Swal.fire(
+        'Se registró en nuestra base de datos!',
+        'Estética O-Z',
+        'success'
+    )
+})
+
 let masajistas = [
     { nombre: "ofelia", edad: 45 },
     { nombre: "raul", edad: 32 },

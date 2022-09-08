@@ -6,6 +6,8 @@
 
 body {
   background-image: url(./img/bg_1.jpg);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -14,6 +16,8 @@ body {
 
 header .navbar {
   background-color: rgba(141, 207, 103, 0.308);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   border-radius: 0 0 10% 10%;
 }
 header .navbar div img {
@@ -41,6 +45,8 @@ main h1 {
 
 footer {
   background-color: rgba(141, 207, 103, 0.308);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   margin-top: 2em;
   border-radius: 15% 15% 0 0;
 }
@@ -49,6 +55,7 @@ footer p {
   color: black;
 }
 footer .p-in {
+  padding-top: 1em;
   text-align: center;
   font-size: 1.5em;
   padding-bottom: 0.5em;
@@ -158,12 +165,48 @@ main div {
   margin-right: 3em;
   padding-top: 1em;
   padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: rgba(141, 207, 103, 0.308);
-  border-radius: 5%;
+  border-radius: 3% 15% 3% 15%;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  text-align: center;
 }
 main form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2em;
+}
+
+.bienvenida-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.bienvenida-container #bienvenida {
+  background-color: rgba(91, 143, 60, 0.799);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  transition: all 0.3s ease-in-out;
+}
+.bienvenida-container #bienvenida:hover {
+  background-color: rgba(141, 207, 103, 0.308);
+  transform: all 0.3s ease-in-out;
+}
+
+.form-Index {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.form-Index h2 {
+  color: rgb(255, 255, 255);
+}
+.form-Index h3 {
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=styles.css.map */
