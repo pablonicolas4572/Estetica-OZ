@@ -1,0 +1,6 @@
+[
+    {"nombre": "Baño de luna", "id": 1, "precio": 4500},
+    {"nombre": "masaje relante", "id": 2, "precio": 3200},
+    {"nombre": "drenaje linfatico", "id": 2, "precio": 3200},
+    {"nombre": "masaje estimulante/reafirmante", "id": 2, "precio": 3200}
+]

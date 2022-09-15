@@ -95,3 +95,25 @@ let search = "ofelia";
 let search2 = masajistas.find(item => item == search);
 
 console.log(search2);
+
+const prod = document.getElementById('prod');
+
+prod.addEventListener('click', async () => {
+    try {
+        let res = await fetch('data.json');
+        let json = await res.json();
+
+        let html = '';
+        json.forEach(producto => {
+            html += `
+                <h3>${producto.nombre}, $${producto.precio}</h1>
+                `
+        });
+        document.getElementById('prod').innerHTML = html;
+        console.log("funciona");
+    } catch (e) {
+        console.log(e);
+    }
+})
+
+
